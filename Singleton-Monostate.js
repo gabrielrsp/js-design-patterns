@@ -14,7 +14,6 @@ const instance1 = new Monostate()
 instance1.addItem('first')
 console.log(instance1.getData())
 
-
 const instance2 = new Monostate()
 instance2.addItem('second')
 console.log(instance2.getData())
@@ -33,7 +32,6 @@ console.log(instance1 === instance2);  //Should be False
     return Singleton.instance;
   }
 
-
   addItem(item) {
     this.data.push(item);
   }
@@ -42,18 +40,14 @@ console.log(instance1 === instance2);  //Should be False
     return this.data;
   }
 
-
-
 }
 
 const singleton1 = new Singleton()
 singleton1.addItem('first')
-
 console.log(singleton1.data)
 
 const singleton2 = new Singleton()
 singleton2.addItem('second')
-
 console.log(singleton2.data)
 
 console.log(singleton1 === singleton2) //Should be True
